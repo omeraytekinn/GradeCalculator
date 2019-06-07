@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainPane" prefHeight="560.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agnocalc.view.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuOpenFile" mnemonicParsing="false" onAction="#openDatabase" text="Open File" />
+              <MenuItem fx:id="menuSaveFile" mnemonicParsing="false" onAction="#saveDatabase" text="Save File" />
+                  <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" onAction="#saveDatabaseAs" text="Save As" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Program">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goMajorProgramView" text="School Program" />
+                  <MenuItem mnemonicParsing="false" onAction="#goStudentProgramView" text="My Program" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+   </top>
+   <left>
+      <Pane prefHeight="556.0" prefWidth="16.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField editable="false" opacity="0.0" prefHeight="414.0" prefWidth="769.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextField>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Pane>
+   </left>
+   <bottom>
+      <Pane prefHeight="15.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <Pane prefHeight="556.0" prefWidth="15.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="75.0" styleClass="welcome" text="Welcome To The Course Grading System" textAlignment="CENTER" />
+            <Label layoutX="316.0" layoutY="137.0" styleClass="welcome" text="You Can Do:" />
+            <Label fx:id="createProgramLink" layoutX="224.0" layoutY="210.0" onMouseClicked="#goMajorProgramView" text="▶ Create New Major Program">
+               <styleClass>
+                  <String fx:value="welcome" />
+                  <String fx:value="link" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="openProgramLink" layoutX="212.0" layoutY="281.0" onMouseClicked="#openDatabase" text="▶ Open Existing Major Program">
+               <styleClass>
+                  <String fx:value="welcome" />
+                  <String fx:value="link" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

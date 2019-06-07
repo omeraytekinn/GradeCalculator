@@ -1,0 +1,10 @@
+.label{
+    -fx-font-size: 15;
+}
+.welcome{
+    -fx-font-size: 25;
+}
+.link{
+    -fx-underline: true;
+    -fx-text-fill: #00f;
+}
